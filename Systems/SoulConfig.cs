@@ -50,6 +50,20 @@ namespace SoulAttuned.Systems
 
         #endregion
 
+        #region UI显示选项
+
+        [Header("UIDisplay")]
+
+        [DefaultValue(true)]
+        public bool ShowInfoHUD { get; set; }
+
+        [Range(0f, 1f)]
+        [DefaultValue(0.9f)]
+        [Increment(0.05f)]
+        public float HUDOpacity { get; set; }
+
+        #endregion
+
         #region 调试选项
 
         [Header("Debug")]

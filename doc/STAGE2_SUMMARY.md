@@ -11,7 +11,7 @@
 
 ## 📦 新增文件清单
 
-### UI系统文件 (7个)
+### UI系统文件 (8个)
 
 1. **UI/UIService.cs** - UI服务层
    - 管理UI显示/隐藏状态
@@ -52,9 +52,15 @@
    - 点击交互逻辑
    - 状态颜色编码
 
+8. **UI/SoulInfoHUD.cs** - 信息HUD显示
+   - 屏幕右上角信息显示
+   - 等级、经验、点数实时显示
+   - 可配置透明度
+   - 美观的背景和边框
+
 ### 数据结构文件 (1个)
 
-8. **Core/TalentNode.cs** - 天赋节点数据结构
+9. **Core/TalentNode.cs** - 天赋节点数据结构
    - TalentNode类（节点数据）
    - TalentNodeType枚举（被动/主动/关键）
    - ClassBranch枚举（职业分支）
