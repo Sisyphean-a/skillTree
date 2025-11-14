@@ -1,6 +1,6 @@
 using Terraria.ModLoader;
 
-namespace SoulAttuned
+namespace SoulAttuned.Utils
 {
     /// <summary>
     /// 灵魂谐振日志工具类
@@ -37,7 +37,7 @@ namespace SoulAttuned
         /// </summary>
         public static void Debug(string message)
         {
-            var config = ModContent.GetInstance<SoulConfig>();
+            var config = ModContent.GetInstance<Systems.SoulConfig>();
             if (config?.DebugMode == true)
             {
                 SoulAttuned.Instance?.Logger.Info($"[Soul-Debug] {message}");
@@ -49,7 +49,7 @@ namespace SoulAttuned
         /// </summary>
         public static void NetSync(string message)
         {
-            var config = ModContent.GetInstance<SoulConfig>();
+            var config = ModContent.GetInstance<Systems.SoulConfig>();
             if (config?.DebugMode == true)
             {
                 SoulAttuned.Instance?.Logger.Info($"[Soul-NetSync] {message}");

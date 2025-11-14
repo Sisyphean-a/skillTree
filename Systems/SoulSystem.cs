@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace SoulAttuned
+namespace SoulAttuned.Systems
 {
     /// <summary>
     /// 灵魂谐振系统类

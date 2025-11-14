@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace SoulAttuned
+namespace SoulAttuned.Utils
 {
     /// <summary>
     /// 调试命令类
@@ -26,7 +26,7 @@ namespace SoulAttuned
         public override void Action(CommandCaller caller, string input, string[] args)
         {
             // 检查是否启用调试模式
-            var config = ModContent.GetInstance<SoulConfig>();
+            var config = ModContent.GetInstance<Systems.SoulConfig>();
             if (!config.DebugMode && !caller.Player.name.Contains("Debug"))
             {
                 caller.Reply("调试模式未启用！请在配置中启用调试模式。", Microsoft.Xna.Framework.Color.Red);
@@ -39,7 +39,7 @@ namespace SoulAttuned
                 return;
             }
 
-            var player = caller.Player.GetModPlayer<SoulPlayer>();
+            var player = caller.Player.GetModPlayer<Core.SoulPlayer>();
             string subcommand = args[0].ToLower();
 
             switch (subcommand)

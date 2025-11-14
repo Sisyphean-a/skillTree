@@ -60,31 +60,36 @@
 
 ```
 SoulAttuned/
-├── build.txt                  # 模组配置
-├── description.txt            # 模组描述
-├── SoulAttuned.csproj       # 项目文件
-├── SoulAttuned.cs        # 主模组类
-├── SoulPlayer.cs              # 玩家数据类
-├── SoulSystem.cs              # 系统管理类
-├── SoulConfig.cs              # 配置类
-├── DebugCommands.cs           # 调试命令
-├── SoulLogger.cs              # 日志工具
-└── DEVELOPMENT_PROGRESS.md    # 开发进度
+├── Core/                      # 核心数据和逻辑
+│   ├── SoulPlayer.cs         # 玩家数据
+│   ├── SoulGlobalNPC.cs      # NPC击杀和经验
+│   └── ResonanceSystem.cs    # 世界谐振
+├── Systems/                   # 系统管理
+│   ├── SoulSystem.cs         # 系统管理
+│   └── SoulConfig.cs         # 配置
+├── Utils/                     # 工具类
+│   ├── SoulLogger.cs         # 日志
+│   └── DebugCommands.cs      # 调试命令
+├── UI/                        # UI相关（待实现）
+├── doc/                       # 文档
+│   ├── DEVELOPMENT_PROGRESS.md
+│   └── TESTING_GUIDE.md
+└── SoulAttuned.cs            # 主模组类
 ```
 
 ## 📖 开发文档
 
-- [开发进度跟踪](DEVELOPMENT_PROGRESS.md) - 当前开发状态和任务清单
-- [技能树设计方案](技能树设计方案.md) - 核心架构和设计理念
-- [节点设计](节点设计.md) - 职业技能节点详细设计
-- [节点实现可行性分析](节点实现可行性分析.md) - 技术可行性分析
-- [开发流程拆分文档](开发流程拆分文档.md) - 详细开发任务
+- [开发进度跟踪](doc/DEVELOPMENT_PROGRESS.md) - 当前开发状态和任务清单
+- [测试指南](doc/TESTING_GUIDE.md) - 功能测试指南
+- [技能树设计方案](doc/技能树设计方案.md) - 核心架构和设计理念
+- [节点设计](doc/节点设计.md) - 职业技能节点详细设计
+- [开发流程拆分文档](doc/开发流程拆分文档.md) - 详细开发任务
 
 ## 🎯 当前开发状态
 
-**版本**: v0.1.0 (开发中)  
-**当前阶段**: 阶段 1 - 核心数据系统  
-**总体进度**: 20%
+**版本**: v0.2.0 (开发中)
+**当前阶段**: 阶段 2 - UI 界面系统
+**总体进度**: 40%
 
 ### 已完成
 - ✅ 阶段 0: 基础架构搭建
@@ -92,14 +97,16 @@ SoulAttuned/
   - 数据持久化系统
   - 调试工具和日志系统
 
+- ✅ 阶段 1: 核心数据系统
+  - 经验获取系统（动态XP公式）
+  - 世界谐振系统（8个阶段，等级上限门控）
+  - 升级系统（自动升级，奖励发放）
+  - 基础属性效果（伤害、防御、移动速度）
+
 ### 进行中
-- 🔄 阶段 1: 核心数据系统
-  - 经验与升级系统
-  - 世界谐振系统
-  - 升级奖励系统
+- 🔄 阶段 2: UI 界面系统 (准备开始)
 
 ### 待开发
-- ⬜ 阶段 2: UI 界面系统
 - ⬜ 阶段 3: 技能节点实现
 - ⬜ 阶段 4: 网络同步与优化
 - ⬜ 阶段 5: 内容完善与平衡

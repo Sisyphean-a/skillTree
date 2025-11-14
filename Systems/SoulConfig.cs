@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using Terraria.ModLoader.Config;
 
-namespace SoulAttuned
+namespace SoulAttuned.Systems
 {
     /// <summary>
     /// 灵魂谐振系统配置
@@ -27,7 +27,7 @@ namespace SoulAttuned
         [Range(50, 1000)]
         [DefaultValue(100)]
         [Increment(10)]
-        public int BaseXPForLeveling { get; set; }
+        public int BaseXPRequired { get; set; }
 
         [Label("Leveling Exponent | 升级指数")]
         [Tooltip("Exponent in leveling formula (higher = slower leveling) | 升级公式中的指数（越高升级越慢）")]
