@@ -14,15 +14,20 @@ namespace SoulAttuned
         public static SoulAttuned Instance { get; private set; }
 
         /// <summary>
+        /// 打开技能树的热键
+        /// </summary>
+        public static ModKeybind OpenSkillTreeKey { get; private set; }
+
+        /// <summary>
         /// 模组加载时调用
         /// </summary>
         public override void Load()
         {
             Instance = this;
-            
+
             // 注册热键
-            RegisterKeybinds();
-            
+            OpenSkillTreeKey = KeybindLoader.RegisterKeybind(this, "OpenSkillTree", "K");
+
             Logger.Info("灵魂谐振系统已加载 | Soul-Attuned System Loaded");
         }
 
@@ -32,16 +37,8 @@ namespace SoulAttuned
         public override void Unload()
         {
             Instance = null;
+            OpenSkillTreeKey = null;
             Logger.Info("灵魂谐振系统已卸载 | Soul-Attuned System Unloaded");
-        }
-
-        /// <summary>
-        /// 注册按键绑定
-        /// </summary>
-        private void RegisterKeybinds()
-        {
-            // 将在后续实现UI时添加热键注册
-            // TODO: 注册打开技能树的热键（默认K键）
         }
     }
 }

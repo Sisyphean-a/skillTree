@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.Chat;
+using Terraria.GameInput;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
@@ -303,6 +304,18 @@ namespace SoulAttuned.Core
         public override void ResetEffects()
         {
             // 将在后续实现技能效果时使用
+        }
+
+        /// <summary>
+        /// 处理按键触发
+        /// </summary>
+        public override void ProcessTriggers(TriggersSet triggersSet)
+        {
+            // 检测打开技能树的热键
+            if (SoulAttuned.OpenSkillTreeKey.JustPressed)
+            {
+                UI.UIService.ToggleSkillBook();
+            }
         }
 
         #endregion
