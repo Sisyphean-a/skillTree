@@ -1,0 +1,9 @@
+displayName = 灵魂谐振系统
+author = 西西弗
+version = 0.1
+side = Both
+dllReferences =
+modReferences =
+buildIgnore = *.csproj, *.user, *.sln, obj\*, bin\*, .vs\*, .git\*, .gitignore, *.md, doc\*, ICON_README.txt
+homepage = https://github.com/Sisyphean-a/skillTree
+description = 灵魂谐振系统 - 一个为泰拉瑞亚添加RPG成长机制的模组，包含经验系统、技能树和世界谐振机制。
